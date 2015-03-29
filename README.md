@@ -40,7 +40,7 @@ under home directory, then make sure you have the appropriate group permissions.
 #### Attributes
 
 - `username` - Username of account to create and populate home directory for. Defaults to name of the resource block.
-- `password` - The password of the user. Required.
+- `password` - The password of the user (required).
 
 #### Example
 
@@ -62,7 +62,7 @@ end
 
 ## ChefSpec Matchers
 
-The Chrome cookbook includes custom [ChefSpec](https://github.com/sethvargo/chefspec) matchers you can use to test your
+The Chrome cookbook includes a custom [ChefSpec](https://github.com/sethvargo/chefspec) matcher you can use to test your
 own cookbooks.
 
 Example Matcher Usage
@@ -73,9 +73,9 @@ expect(chef_run).to create_windows_home('username').with(
 )
 ```
 
-Windows Desktop Cookbook Matchers
+Windows Home Cookbook Matcher
 
-- create_windows_home(resource_name)
+- create_windows_home(username)
 
 ## Getting Help
 
