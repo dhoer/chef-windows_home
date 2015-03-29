@@ -20,6 +20,7 @@ describe 'windows_home_test::default' do
         append: true
       )
     end
+
     it 'creates home' do
       expect(chef_run).to create_windows_home('newuser').with(
         password: 'N3wPassW0Rd'
