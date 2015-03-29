@@ -1,6 +1,3 @@
-# rubocop:disable AbcSize
-# rubocop:disable MethodLength
-
 def home_dir(username)
   ::File.join(ENV['SYSTEMDRIVE'], 'Users', username).gsub(::File::SEPARATOR, ::File::ALT_SEPARATOR)
 rescue
