@@ -8,7 +8,7 @@
 [travis]: https://travis-ci.org/dhoer/chef-windows_home
 [github]: https://github.com/dhoer/chef-windows_home/issues
 
-Windows Home creates and populates the user's home directory (e.g. C:\\Users\\\{username}).  This is useful for
+Windows Home generates user's home directory (e.g. C:\\Users\\\{username}).  This is useful for
 when you need access to directories like Documents or AppData after creating a user.
 
 Tested on Amazon Windows Server 2012 R2 AMI.
@@ -24,13 +24,13 @@ Tested on Amazon Windows Server 2012 R2 AMI.
 
 ## Usage
 
-Include windows_home as a dependency to use windows_home resource.
+Include `windows_home` as a dependency to use resource.
 
 ### windows_home
 
-Creates and populates the user's home directory (e.g. C:\\Users\\{username}).
+Generates user's home directory (e.g. C:\\Users\\{username}).
 
-Note that user will have to be created before calling windows_home. If you are not able to create a file
+Note the user will have to be created before calling windows_home. If you are not able to create a file
 under home directory, then make sure you have the appropriate group permissions.
 
 #### Actions
