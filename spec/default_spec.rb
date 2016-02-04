@@ -30,14 +30,14 @@ describe 'windows_home_test::default' do
     it 'creates task' do
       expect(chef_run).to run_execute('create_build_newuser_home_task').with(
         sensitive: true,
-        command: "schtasks /Create /TN \"build_newuser_home\" /SC once /SD \"01/01/2003\" /ST \"00:00\" /TR"\
+        command: 'schtasks /Create /TN "build_newuser_home" /SC once /SD "01/01/2003" /ST "00:00" /TR'\
           " \"whoami.exe\" /RU \"newuser\" /RP \"N3wPassW0Rd\" /RL HIGHEST\n"
       )
     end
 
     it 'runs task' do
       expect(chef_run).to run_execute('run_build_newuser_home_task').with(
-        command: "schtasks /Run /TN \"build_newuser_home\""
+        command: 'schtasks /Run /TN "build_newuser_home"'
       )
     end
 
@@ -48,7 +48,7 @@ describe 'windows_home_test::default' do
     it 'deletes task' do
       allow_any_instance_of(Chef::Recipe).to receive(:task_query).and_return('Ready')
       expect(chef_run).to_not run_execute('delete_build_newuser_home_task').with(
-        command: "schtasks /Delete /TN \"build_newuser_home\""
+        command: 'schtasks /Delete /TN "build_newuser_home"'
       )
     end
 
