@@ -1,6 +1,8 @@
 require 'chef/mixin/shell_out'
 include Chef::Mixin::ShellOut
 
+use_inline_resources
+
 def whyrun_supported?
   true
 end
