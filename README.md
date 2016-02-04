@@ -2,11 +2,9 @@
 
 [![Cookbook Version](http://img.shields.io/cookbook/v/windows_home.svg?style=flat-square)][cookbook]
 [![Build Status](http://img.shields.io/travis/dhoer/chef-windows_home.svg?style=flat-square)][travis]
-[![GitHub Issues](http://img.shields.io/github/issues/dhoer/chef-windows_home.svg?style=flat-square)][github]
 
 [cookbook]: https://supermarket.chef.io/cookbooks/windows_home
 [travis]: https://travis-ci.org/dhoer/chef-windows_home
-[github]: https://github.com/dhoer/chef-windows_home/issues
 
 Windows Home generates user's home directory (e.g. C:\\Users\\\{username}).  This is useful for
 when you need access to directories like Documents or AppData after creating a user.
@@ -79,7 +77,7 @@ Windows Home Cookbook Matcher
 
 ## Getting Help
 
-- Ask specific questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/chef-windows_home).
+- Ask specific questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/windows+user).
 - Report bugs and discuss potential features in [Github issues](https://github.com/dhoer/chef-windows_home/issues).
 
 ## Contributing
