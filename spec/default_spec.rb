@@ -51,20 +51,5 @@ describe 'windows_home_test::default' do
         command: 'schtasks /Delete /TN "build_newuser_home"'
       )
     end
-
-    it 'logs user home is created' do
-      expect(chef_run).to write_log('C:/Users/newuser created')
-    end
-  end
-
-  context 'non_windows' do
-    let(:chef_run) do
-      ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '14.04',
-                               step_into: ['windows_home']).converge(described_recipe)
-    end
-
-    it 'should warn if not Windows platform' do
-      expect(chef_run).to write_log('Resource windows_home is only available for Windows platform!')
-    end
   end
 end

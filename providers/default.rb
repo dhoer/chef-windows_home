@@ -41,8 +41,8 @@ schtasks /Create /TN "#{task_name}" /SC once /SD "01/01/2003" /ST "00:00" \
       not_if { task_query(task_name).empty? }
     end
 
-    log "#{user_home} created"
+    Chef::Log.info("#{user_home} created")
   else
-    log('Resource windows_home is only available for Windows platform!') { level :warn }
+    Chef::Log.warn('Resource windows_home is only available for Windows platform!')
   end
 end
