@@ -16,11 +16,11 @@ action :create do
     # Create whoami as scheduled task to get Local Server group privilege:
     # SeAssignPrimaryTokenPrivilege (Replace a process-level token)
     execute "create_#{task_name}_task" do
-      sensitive new_resource.sensitive
-      command <<-EOF
+      sensitive new_resource.confidential
+      command <<EOF
 schtasks /Create /TN "#{task_name}" /SC once /SD "01/01/2003" /ST "00:00" \
 /TR "whoami.exe" /RU "#{new_resource.username}" /RP "#{new_resource.password}" /RL HIGHEST
-        EOF
+EOF
       only_if { task_query(task_name).empty? }
     end
 

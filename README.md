@@ -38,8 +38,11 @@ under home directory, then make sure you have the appropriate group permissions.
 
 #### Attributes
 
-- `username` - Username of account to create and populate home directory for. Defaults to name of the resource block.
+- `username` - Username of account to create and populate home directory 
+for. Defaults to name of the resource block.
 - `password` - The password of the user (required).
+- `confidential` - Ensure that sensitive resource data is not logged by 
+the chef-client. Default: `true`.
 
 #### Example
 
