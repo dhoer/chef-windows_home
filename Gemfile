@@ -5,7 +5,6 @@ gem 'chef', '~> 12.6'
 gem 'chefspec'
 gem 'cookstyle'
 gem 'foodcritic'
-gem 'rubocop', '= 0.47.1'
 
 group :integration do
   gem 'kitchen-vagrant'
